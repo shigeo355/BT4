@@ -5,7 +5,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2: run với Tomcat 10.1 (Jakarta Servlet 6.0)
-FROM tomcat:10.1-jdk17
+FROM tomcat:11.0-jdk17
 
 # Xóa app mặc định
 RUN rm -rf /usr/local/tomcat/webapps/*
